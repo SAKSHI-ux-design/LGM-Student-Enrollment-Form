@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Student Enrollment Form
+    </title>
+    <link rel="stylesheet" href="enrollment.css">
+</head>
+<h1 class="title"> "Student Enrollment Form"</h1>
+
+<body>
+    <table>
+        
+        <tr>
+            
+            <td class="form">
+                
+                    <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                        
+                        
+                        <div>
+                            <label class="bold">Full Name*:</label>
+                            <label class="validation-error hide" id="fullNameValidationError">This field is
+                                required.</label>
+                            <input type="text" name="fullName" id="fullName">
+                        </div>
+                        <div>
+                            <label class="bold">City:</label>
+                            <input type="text" name="city" id="city">
+                        </div>
+                        <div>
+                            <label class="bold">Mobile No:</label>
+                            <input type="number" name="mobile" id="mobile">
+
+                        </div>
+                        <div>
+                            <label class="bold">Email Id:</label>
+                            <input type="text" name="email" id="email">
+                        </div>
+                        <div>
+                            <label for="gender" class="bold"> Gender </label>
+                            <select name="gender" id="gender">
+                                <option value="none" selected>gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="Course:" class="bold"> Course</label>
+                            <select name="course" id="course">
+                                <option value="none" selected>Course</option>
+                                <option value="Computer Engineering">Computer Engineering</option>
+                                <option value="Mechanical Engineering">Mechanical Engineering</option>
+                                <option value="Civil Engineering">Civil Engineering</option>
+                            </select>
+                        </div>
+
+                        <div class="form-action-buttons">
+                            <input type="submit" value="REGISTER">
+                        </div>
+                
+                </form>
+            
+            </td>
+            <td >
+                <table class="list" id="studentList">
+                    <thead>
+                        
+                        <tr >
+                            <th>Full Name </th>
+                            <th>City </th>
+                            <th>Mobile No </th>
+                            <th>Email Id </th>
+                            <th>Gender </th>
+                            <th>Course </th>
+                            <th>Edit Options </th>
+                        </tr>
+                    </thead>
+                    <tbody class="box" >
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script src="enrollment.js"></script>
+</body>
+
+</html>
